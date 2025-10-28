@@ -1,0 +1,12 @@
+
+services:
+  zkorigo:
+    build: .
+    container_name: zkorigo_plus
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    volumes:
+      - ./app_data:/app_data
+      - ./static:/app/static
